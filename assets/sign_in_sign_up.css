@@ -1,0 +1,31 @@
+.form {
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+.inputField {
+    margin-bottom: 15px;
+}
+
+.inputField_title {
+    margin-bottom: 7px;
+}
+
+.inputField_input {
+    padding: 5px;
+    border: 1px solid silver;
+}
+
+.createUser_form-submit {
+    margin: 15px 0 10px 0;
+}
+
+.switchForm {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ref_title {
+    color: rgb(109,109,109);
+    margin-bottom: 5px;
+}
