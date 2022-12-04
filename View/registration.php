@@ -1,4 +1,4 @@
-<?php include("header.php") ?>
+<?php include("head.php") ?>
 <link rel="stylesheet" href="./assets/sign_in_sign_up.css">
 </head>
 
@@ -8,7 +8,7 @@
         Create an account
     </h1>
 
-    <form action="./create_user.php" method="post">
+    <form action="./create_user" method="post">
         <div class="inputField flex-column">
             <span class="inputField_title">
                 Name

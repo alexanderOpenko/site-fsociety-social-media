@@ -12,16 +12,6 @@ class Router {
         $path = $this->routes[$url];
 
         if ($path) {
-            if (!$_SESSION['user_id']) {
-                header('Location: signin_signup_card.php');
-                return;
-            }
-
-            if ($_SESSION['user_id'] && $url == 'signin_signup_card') {
-                header('Location: profile');
-                return;
-            }
-
             require $path;
         } else {
             echo '404';

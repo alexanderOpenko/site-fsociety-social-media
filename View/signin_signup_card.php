@@ -1,6 +1,6 @@
 <?php session_start() ?>
-<?php include("header.php") ?>
-<link rel="stylesheet" href="./assets/sign_in_sign_up.css">
+<?php include("head.php") ?>
+<link rel="stylesheet" href="../assets/sign_in_sign_up.css">
 </head>
 
 <body>
@@ -10,7 +10,7 @@
                 Sign in
             </h1>
 
-            <form action='./login.php' method="post">
+            <form action='login' method="post">
                 <div class="inputField flex-column">
                     <span class="inputField_title">
                         Email
@@ -39,7 +39,7 @@
 
         <div class="switchForm flex-column">
             <span class="ref_title">Don't have an account?</span>
-            <a href="registration.php">
+            <a href="registration">
                 Sign up
             </a>
         </div>

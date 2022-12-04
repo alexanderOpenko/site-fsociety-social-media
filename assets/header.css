@@ -1,0 +1,21 @@
+header {
+    padding: 20px;
+    background-color: rgb(42, 147, 233);
+}
+
+header .menuItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .menuItems a {
+    color: white
+}
+
+.menuItems_logo {
+    font-weight: normal;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
