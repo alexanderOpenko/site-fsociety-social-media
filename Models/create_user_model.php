@@ -26,7 +26,17 @@ class Create_user_model {
             return;
         }
 
+        $user_dir = './users_content/user' . $connect->insert_id;
+        mkdir($user_dir, 0777, true);
+
         $this->user_id = $connect->insert_id;
+
+        $sql_create_avatar = "INSERT INTO `avatars`(`avatar`, `avatar_id`) VALUES ('NULL', '$this->user_id')";
+
+        if(!$connect->query($sql_create_avatar)) {
+            print json_encode($connect->error);
+            return;
+        }
 
         header('Location: profile');
     }

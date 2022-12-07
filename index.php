@@ -3,6 +3,7 @@ session_start();
 require_once('connect.php');
 require('router.php');
 
+global $method;
 global $request_data;
 define("BASE_DIR", dirname(__FILE__));
 
@@ -25,6 +26,7 @@ function getData($method) {
 
 $router = new Router();
 $router->add_router('profile', BASE_DIR . '/Controllers/' . 'profile_controller.php');
+$router->add_router('profile_avatar', BASE_DIR . '/Controllers/' . 'profile_controller.php');
 $router->add_router('/',  BASE_DIR . '/Controllers/' . 'home_controller.php');
 $router->add_router('registration',  BASE_DIR . '/View/' . 'registration.php');
 $router->add_router('create_user', BASE_DIR . '/Controllers/' . 'registration_controller.php');
@@ -33,7 +35,9 @@ $router->add_router('logout', BASE_DIR . '/logout.php');
 $router->add_router('login', BASE_DIR . '/Controllers/' . 'login_controller.php');
 
 $url = isset($_GET['url']) ? $_GET['url'] : '/';
-$request_data = getData($_SERVER['REQUEST_METHOD']);
+
+$method = $_SERVER['REQUEST_METHOD'];
+$request_data = getData($method);
 
 $router->route($url);
 ?>
