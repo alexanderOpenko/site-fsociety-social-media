@@ -25,9 +25,10 @@ function getData($method) {
 }
 
 $router = new Router();
+$router->add_router('/',  BASE_DIR . '/Controllers/' . 'home_controller.php');
 $router->add_router('profile', BASE_DIR . '/Controllers/' . 'profile_controller.php');
 $router->add_router('profile_avatar', BASE_DIR . '/Controllers/' . 'profile_controller.php');
-$router->add_router('/',  BASE_DIR . '/Controllers/' . 'home_controller.php');
+$router->add_router('direct', BASE_DIR . '/Controllers/' . 'direct_controller.php');
 $router->add_router('registration',  BASE_DIR . '/View/' . 'registration.php');
 $router->add_router('create_user', BASE_DIR . '/Controllers/' . 'registration_controller.php');
 $router->add_router('signin_signup_card',  BASE_DIR . '/View/' . 'signin_signup_card.php');
